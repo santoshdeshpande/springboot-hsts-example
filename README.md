@@ -12,8 +12,8 @@ The project consists of two parts
   * `proxy_set_header X-Forwarded-Proto $scheme;`
     
 ## Running the application
-
-`docker-compose up --build`
+1. `mvn package`
+2. `docker-compose up --build`
 
 The access the application using [https://localhost](https://localhost) and when the network tab in the browser is inspected for headers you should see something like this.
 
