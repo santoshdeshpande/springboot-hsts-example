@@ -1,0 +1,1 @@
+docker run --rm -v $PWD/certkey:/usr/share alpine /bin/sh -c "apk add openssl; openssl req -x509 -nodes -days 365 -subj \"/C=CA/ST=QC/O=Company, Inc./CN=newdomain.com\" -addext \"subjectAltName=DNS:newdomain.com\" -newkey rsa:2048 -keyout /usr/share/nginx-selfsigned.key -out /usr/share/nginx-selfsigned.crt;"

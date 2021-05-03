@@ -5,8 +5,8 @@ RUN apk add nginx; \
     echo "<h1>Hello world!</h1>" > /var/www/localhost/htdocs/index.html;
 
 ADD $PWD/default.conf /etc/nginx/conf.d/default.conf
-ADD $PWD/*.key /etc/ssl/private/
-ADD $PWD/*.crt /etc/ssl/certs/
+ADD $PWD/certkey/*.key /etc/ssl/private/
+ADD $PWD/certkey/*.crt /etc/ssl/certs/
 
 WORKDIR /var/www/localhost/htdocs
 
